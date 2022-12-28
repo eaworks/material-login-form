@@ -3,3 +3,25 @@ justify-content: space-between;" color="primary">
   <span>Register Login Form</span>
   <a>Giris Yap</a>
 </mat-toolbar>
+
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+  <mat-card style="min-width: 30%;">
+    <mat-card-header>
+      <mat-card-title>Kullanici Girisi</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form class="d-flex flex-column">
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Emailinizi Giriniz">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Sifre</mat-label>
+          <input matInput placeholder="Sifrenizi Giriniz">
+        </mat-form-field>
+        <button mat-raised-button color="primary">Giris Yap</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
