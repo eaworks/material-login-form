@@ -15,10 +15,17 @@ justify-content: space-between;" color="primary">
         <mat-form-field appearance="fill">
           <mat-label>Email</mat-label>
           <input matInput placeholder="Emailinizi Giriniz" formControlName="email">
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Email Zorunludur</mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+            Lutfen dogru formatta email giriniz
+          </mat-error>
         </mat-form-field>
         <mat-form-field appearance="fill">
           <mat-label>Sifre</mat-label>
           <input type="password" matInput placeholder="Sifrenizi Giriniz" formControlName="password">
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Sifre Zorunludur</mat-error>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">Lutfen minimum 8 karakter
+            giriniz</mat-error>
         </mat-form-field>
         <button [disabled]="loginForm.invalid" mat-raised-button color="primary">Giris Yap</button>
       </form>
