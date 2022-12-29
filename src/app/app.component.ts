@@ -7,8 +7,5 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  loginForm = new FormGroup({
-    email: new FormControl(null, [Validators.required, Validators.email]),
-    password: new FormControl(null, [Validators.required, Validators.minLength(8)]),
-  })
+
 }
