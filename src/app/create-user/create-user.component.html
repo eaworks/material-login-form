@@ -40,12 +40,15 @@
                         Zorunludur</mat-error>
                     <mat-error *ngIf="createUserForm.get('repassword')?.hasError('minlength')">Lutfen minimum 8 karakter
                         giriniz</mat-error>
+                    <mat-error *ngIf="createUserForm.get('repassword')?.hasError('not_the_same')">Sifreler
+                        eslesmiyor</mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="fill">
                     <mat-label>Adres</mat-label>
                     <textarea matInput placeholder="Adresinizi Giriniz" formControlName="address"></textarea>
                     <mat-error *ngIf="createUserForm.get('address')?.hasError('required')">Adres
                         Zorunludur</mat-error>
+
                 </mat-form-field>
                 <div class="d-flex justify-content-between align-items-center"><a
                         style="text-decoration: none; color: black;" routerLink="/login">Giris Yap</a>
